@@ -53,6 +53,7 @@ resource "aws_instance" "lab" {
 resource "aws_s3_bucket" "lab" {
   bucket = "git-lab-demo-bucket"
 }
+<<<<<<< HEAD
 
 # creating bucket versioning
 
@@ -66,3 +67,5 @@ resource "aws_s3_bucket_public_access_block" "lab" {
   bucket = aws_s3_bucket.lab.id
 }
 
+=======
+>>>>>>> parent of cbb1b34 (JIRA-16: Add bucket versioning)
