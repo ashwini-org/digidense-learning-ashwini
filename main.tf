@@ -47,3 +47,9 @@ resource "aws_instance" "lab" {
   ami           = "ami-dummy"
   instance_type = "t2.micro"
 }
+
+# creating s3 bucket
+
+resource "aws_s3_bucket" "lab" {
+  bucket = "git-lab-demo-bucket"
+}
