@@ -28,12 +28,44 @@ resource "aws_subnet" "lab" {
 resource "aws_security_group" "lab" {
   name   = "lab-sg"
   vpc_id = aws_vpc.lab.id
+
 }
 
-# creating aws_internet_gateway
+# creating aws_route_table
 
-resource "aws_internet_gateway" "lab" {
+resource "aws_route_table" "lab" {
   vpc_id = aws_vpc.lab.id
+
+  tags = {
+    Name = "corrected-route"
+  }
 }
 
+#creating aws ec2
 
+resource "aws_instance" "lab" {
+  ami           = "ami-dummy"
+  instance_type = "t2.micro"
+}
+
+# creating s3 bucket
+
+resource "aws_s3_bucket" "lab" {
+  bucket = "git-lab-demo-bucket"
+}
+<<<<<<< HEAD
+
+# creating bucket versioning
+
+resource "aws_s3_bucket_versioning" "lab" {
+  bucket = aws_s3_bucket.lab.id
+}
+
+# creating public access
+
+resource "aws_s3_bucket_public_access_block" "lab" {
+  bucket = aws_s3_bucket.lab.id
+}
+
+=======
+>>>>>>> parent of cbb1b34 (JIRA-16: Add bucket versioning)
