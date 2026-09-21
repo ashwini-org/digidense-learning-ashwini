@@ -31,7 +31,13 @@ resource "aws_security_group" "lab" {
 
 }
 
+# creating aws_route_table
 
-# Test protected main
+resource "aws_route_table" "lab" {
+  vpc_id = aws_vpc.lab.id
 
+  tags = {
+    Name = "corrected-route"
+  }
+}
 
