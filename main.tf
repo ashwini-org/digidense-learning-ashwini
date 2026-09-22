@@ -60,4 +60,3 @@ resource "aws_s3_bucket_versioning" "lab" {
   bucket = aws_s3_bucket.lab.id
 }
 
-
