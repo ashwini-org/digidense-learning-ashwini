@@ -60,12 +60,4 @@ resource "aws_s3_bucket_versioning" "lab" {
   bucket = aws_s3_bucket.lab.id
 }
 
-# creating kms_key
-
-resource "aws_kms_key" "example" {
-  description             = "KMS key for encryption"
-  deletion_window_in_days = 7
-  enable_key_rotation     = true
-}
-
 
