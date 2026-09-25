@@ -63,7 +63,7 @@ resource "aws_s3_bucket_versioning" "lab" {
 # creating iam user
 
 resource "aws_iam_user" "lab_user" {
-name = "lab-user"
+  name = "lab-user"
 }
 
 # creating lambda
