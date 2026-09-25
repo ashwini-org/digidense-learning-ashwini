@@ -51,7 +51,7 @@ resource "aws_instance" "lab" {
 # creating s3 bucket
 
 resource "aws_s3_bucket" "lab" {
-  bucket = "company-production-bucket"
+  bucket = "digidense-production-bucket"
 }
 
 # creating bucket versioning
@@ -63,7 +63,7 @@ resource "aws_s3_bucket_versioning" "lab" {
 # creating iam user
 
 resource "aws_iam_user" "lab_user" {
-name = "lab-user"
+  name = "lab-user"
 }
 
 # creating lambda
