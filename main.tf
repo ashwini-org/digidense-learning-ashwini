@@ -65,3 +65,13 @@ resource "aws_s3_bucket_versioning" "lab" {
 resource "aws_iam_user" "lab_user" {
 name = "lab-user"
 }
+
+# creating lambda
+
+resource "aws_lambda_function" "demo" {
+  function_name = "demo-lambda"
+  role          = aws_iam_role.lambda_role.arn
+  handler       = "index.handler"
+  runtime       = "python3.12"
+  filename      = "lambda.zip"
+}
