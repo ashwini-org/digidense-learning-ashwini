@@ -51,7 +51,7 @@ resource "aws_instance" "lab" {
 # creating s3 bucket
 
 resource "aws_s3_bucket" "lab" {
-  bucket = "digidense-production-bucket-s"
+  bucket = "developer-one-bucket"
 }
 
 # creating bucket versioning
