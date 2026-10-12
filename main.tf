@@ -45,7 +45,8 @@ resource "aws_route_table" "lab" {
 
 resource "aws_instance" "lab" {
   ami           = "ami-dummy"
-  instance_type = "t2.small"
+  instance_type = "t2.medium"
+
 }
 
 # creating s3 bucket
