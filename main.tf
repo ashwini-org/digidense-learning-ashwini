@@ -46,12 +46,13 @@ resource "aws_route_table" "lab" {
 resource "aws_instance" "lab" {
   ami           = "ami-dummy"
   instance_type = "t2.medium"
+
 }
 
 # creating s3 bucket
 
 resource "aws_s3_bucket" "lab" {
-  bucket = "developer-one-bucket"
+
 }
 
 # creating bucket versioning
